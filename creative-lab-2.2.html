@@ -12,15 +12,15 @@
         <form>
             <p>
                 <label>Name:</label>
-                <input type="text" class="form_input" required>
+                <input type="text" class="form-input" required>
             </p>
             <p>
                 <label>Email:</label>
-                <input type="email" class="form_input" required>
+                <input type="email" class="form-input" required>
             </p>
             <p>
                 <label>Room type:</label>
-                <select class="form_input" required>
+                <select class="form-input" required>
                     <option value="default">Select *</option>
                     <option>Single</option>
                     <option>Double</option>
@@ -29,15 +29,15 @@
             </p>
             <p>
                 <label>Arrival date:</label>
-                <input type="date" class="form_input" required>
+                <input type="date" class="form-input" required>
             </p>
             <p>
                 <label>Departure date:</label>
-                <input type="date" class="form_input" required>
+                <input type="date" class="form-input" required>
             </p>
             <p>
                 <label>Number of guests:</label>
-                <input type="number" class="form_input" style="width: 110px;" required>
+                <input type="number" class="form-input" style="width: 110px;" required>
             </p>
             <p>
                 <label>Free pickup:</label>
@@ -47,14 +47,14 @@
             </p>
             <p>
                 <label>Flight number:</label>
-                <input type="number" class="form_input" required>
+                <input type="number" class="form-input" required>
             </p>
             <p>
                 <label style="vertical-align: top;">Special requests:</label>
-                <textarea class="form_input" style="height: 100px;"></textarea>
+                <textarea class="form-input" style="height: 100px;"></textarea>
             </p>
             <p>
-                <input type="button" value="Submit" class="button">
+                <input type="button" value="Submit" class="custom-button">
             </p>
         </form>
         <style>
@@ -75,7 +75,7 @@
             textarea {
                 resize: vertical;
             }
-            .button {
+            .custom-button {
                 background-color: limegreen;
                 border: 2px;
                 border-color: limegreen;
@@ -87,7 +87,7 @@
                 font-size: medium;
                 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             }
-            .form_input {
+            .form-input {
                 display: table-cell; 
                 height: 30px;
                 background-color: whitesmoke;
