@@ -1,0 +1,84 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.info-card-left {
+    background-color: lightgoldenrodyellow;
+    width: 45%;
+    min-height: 500px;
+    margin: 2.2%;
+    border-width: 2px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: gold;
+    /* padding: 20px; */
+    text-align: justify;
+    box-shadow: 0px 5px 5px gainsboro;
+    float: left;
+}
+
+.info-card-right {
+    background-color: lightgoldenrodyellow;
+    width: 45%;
+    min-height: 500px;
+    margin: 2.2%;
+    border-width: 2px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: gold;
+    /* padding: 20px; */
+    text-align: justify;
+    box-shadow: 0px 5px 5px gainsboro;
+    float: right;
+}
+
+.info-card-img-div {
+    width: 250;
+    float: left;
+}
+
+.info-card-image {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.info-card-heading-div {
+    width: 100%;
+    /* float: right; */
+    text-align: left;
+}
+
+.info-card-heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.info-card-h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: table-cell;
+}
+
+.info-card-para {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    padding: 2%;
+}
+
+.learn-more-link {
+    background-color: limegreen;
+    color: white;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-radius: 10px;
+    padding: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0px 2px gainsboro;
+    display: table-cell;
+}
+
+.learn-more-link:hover {
+    background-color: green;
+    transition: 0.2s ease-in-out;
+}
