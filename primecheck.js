@@ -7,9 +7,8 @@ function filterPrimes(n) {
     for (var i = 2; i <= n / 2; i++) {
         for (var j = 2; j * i <= n; j++) list[j * i - 1] = false;
     }
-    primelist = [];
-    for (var i = 2; i <= n; i++) {
-        if (list[i - 1]) primelist.push(i);
-    }
-    return primelist;
+    return list
+        .map((x, i) => i)
+        .filter((x, i) => list[i])
+        .map(x => x + 1);
 }
