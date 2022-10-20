@@ -1,0 +1,9 @@
+var person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 50,
+    eyeColor: "blue"
+}
+
+console.log("Keys: " + Object.keys(person));
+console.log("Values: " + Object.values(person));

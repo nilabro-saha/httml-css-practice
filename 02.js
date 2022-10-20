@@ -1,0 +1,1 @@
+console.log("Twikle Twikle little stars".replaceAll("Twikle", "Twinkle"));
