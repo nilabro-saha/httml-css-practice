@@ -3,7 +3,7 @@ class newString {
         this.mainstr = mainstr;
     }
     getindices(sub) {
-        return Array.from(this.mainstr.matchAll(new RegExp(sub, 'g')), m => [m.index, m.index + sub.length]);
+        return Array.from(this.mainstr.matchAll(new RegExp(sub, 'g')), m => [m.index, m.index + m[0].length]);
     }
     capitalize() {
         return this.mainstr.replace(/^./, (x => x.toUpperCase()));
