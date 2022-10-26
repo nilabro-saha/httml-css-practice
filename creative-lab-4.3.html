@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Lab #4.3</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>Creative Lab #4.3</h1>
+    <h3>Select:</h3>
+    <input type="radio" name="select-type" id="radio1" value="floating_pt" checked>
+    <label for="radio1">Floating Point</label>
+    <br />
+    <input type="radio" name="select-type" id="radio2" value="email">
+    <label for="radio2">Email</label>
+    <br />
+    <input type="radio" name="select-type" id="radio3" value="ip_address">
+    <label for="radio3">IP Address</label>
+
+    <h3>Text area:</h3>
+    <textarea id="text-area" rows="4" cols="50"></textarea>
+
+    <h3>Items found:</h3>
+    <ul id="found-list"></ul>
+</body>
+<script src="./creative-lab-43.js"></script>
+<script type="text/javascript">
+    function updateFoundList() {
+        $('#found-list').empty();
+        switch ($('input[name="select-type"]:checked').val()) {
+            case "floating_pt":
+                selectFloatingPoint($('#text-area').val()).forEach(
+                    x => $('#found-list').append($('<li>').append(x))
+                );
+                break;
+            case "email":
+                selectEmail($('#text-area').val()).forEach(
+                    x => $('#found-list').append($('<li>').append(x))
+                );
+                break;
+            case "ip_address":
+                selectIpAddress($('#text-area').val()).forEach(
+                    x => $('#found-list').append($('<li>').append(x))
+                );
+                break;
+        }
+    };
+    $(document).ready(function () {
+        $('#text-area').on('input', updateFoundList);
+        $('#text-area').on('click', updateFoundList);
+        $('input[name="select-type"]').on('click', updateFoundList);
+    });
+
+</script>
+
+</html>

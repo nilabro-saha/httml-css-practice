@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-  <head>
-    <meta charset="utf-8">
-    <title>Calculator</title>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    
-  </head>
+<head>
+  <meta charset="utf-8">
+  <title>Calculator</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <body>
+</head>
 
-    <div class="calculator">
+<body>
 
-      <div class="operands">
-        <label for="ina">A = </label>
-        <input type="text" id="ina" name="ina" value="0">
-        <br><br>
-        <label for="inb">B = </label>
-        <input type="text" id="inb" name="inb" value="0">
-      </div>
+  <div class="calculator">
 
-      <br>
-
-      <div class="ops">
-        <input type="radio" id="add" name="op" value="add">
-        <label for="add">Add</label><br>
-        <input type="radio" id="sub" name="op" value="sub">
-        <label for="sub">Subtract</label><br>
-        <input type="radio" id="mul" name="op" value="mul">
-        <label for="mul">Multiply</label><br>
-        <input type="radio" id="div" name="op" value="div">
-        <label for="div">Divide</label><br>
-      </div>
-
+    <div class="operands">
+      <label for="ina">A = </label>
+      <input type="text" id="ina" name="ina" value="0">
+      <br><br>
+      <label for="inb">B = </label>
+      <input type="text" id="inb" name="inb" value="0">
     </div>
 
     <br>
 
-    <div class="result">
-      <input type="submit" id="submit" name="submit" value="Submit"><br><br>
-      <label for="">Result : </label><span id="result"></span>
+    <div class="ops">
+      <input type="radio" id="add" name="op" value="add">
+      <label for="add">Add</label><br>
+      <input type="radio" id="sub" name="op" value="sub">
+      <label for="sub">Subtract</label><br>
+      <input type="radio" id="mul" name="op" value="mul">
+      <label for="mul">Multiply</label><br>
+      <input type="radio" id="div" name="op" value="div">
+      <label for="div">Divide</label><br>
     </div>
 
-    <script type="text/javascript">
-      
-      
-        
-    </script>
-  </body>
+  </div>
+
+  <br>
+
+  <div class="result">
+    <input type="submit" id="submit" name="submit" value="Submit"><br><br>
+    <label for="">Result : </label><span id="result"></span>
+  </div>
+
+  <script type="text/javascript">
+    document.getElementById("submit").onclick = function () {
+      document.getElementById("result").innerHTML = ((a, b, option) => {
+        switch (option) {
+          case "add": return a + b;
+          case "sub": return a - b;
+          case "mul": return a * b;
+          case "div": return a / b;
+        }
+      })(parseFloat(document.getElementById("ina").value),
+        parseFloat(document.getElementById("inb").value),
+        Array.from(document.getElementsByName("op"))
+          .filter(r => r.checked)
+          .map(r => r.value)[0]);
+
+    }
+  </script>
+</body>
+
 </html>

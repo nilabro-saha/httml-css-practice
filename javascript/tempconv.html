@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Temperature Converter</title>
-  </head>
-  <body>
-    <h3>
-      <label>Fahrenheit</label>
-      <input id="inputFahrenheit" type="number" placeholder="Fahrenheit"
-      oninput="toCelciusConverter(this.value)">
-      <p>Celsius: <span id="outputCelsius"></span></p>
-      <hr>
-      <label>Celcius</label>
-      <input id="inputFahrenheit" type="number" placeholder="Celcius"
-      oninput="toFarenheitConverter(this.value)">
-      <p>Fahrenheit<span id="outputCelsius"></span></p>
-    </h3>
-    
 
+<head>
+  <meta charset="utf-8">
+  <title>Temperature Converter</title>
+</head>
+
+<body>
+  <h3>
+    <label>Fahrenheit</label>
+    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="toCelciusConverter(this.value)">
+    <p>Celsius: <span id="outputCelsius"></span></p>
+    <hr>
+    <label>Celcius</label>
+    <input id="inputCelcius" type="number" placeholder="Celcius" oninput="toFarenheitConverter(this.value)">
+    <p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+  </h3>
+
+  <script src="./functions.js"></script>
   <script>
-    
-
+    function toFarenheitConverter(value) {
+      document.getElementById("outputFahrenheit").innerHTML =
+        value == '' ? '' : convertToFahrenheit(parseFloat(value)) + "F";
+    }
+    function toCelciusConverter(value) {
+      document.getElementById("outputCelsius").innerHTML =
+        value == '' ? '' : convertToCelcius(parseFloat(value)) + "C";
+    }
   </script>
-    
-  </body>
+
+</body>
+
 </html>

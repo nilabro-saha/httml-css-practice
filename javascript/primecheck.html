@@ -11,31 +11,35 @@
 </head>
 
 <body>
-	
-		<h1>Prime Check</h1>
+
+	<h1>Prime Check</h1>
 
 
 
-		<hr color="Green">
-    <br>
+	<hr color="Green">
+	<br>
 
-		<form name="myform">
-			Enter the number:
-			<input type="number" name="n" value="">
+	<form name="myform">
+		Enter the number:
+		<input type="number" name="n" value="">
 
-			<br><br>
+		<br><br>
 
-			<input type="button" value="Check" onClick="p()">
-			<br>
+		<input type="button" value="Check" onClick="p()">
+		<br>
 
-			<h1 id="result"></h1>
-		</form>
-	
+		<h1 id="result"></h1>
+	</form>
 
-  <script type="text/javascript">
+	<script src="./functions.js"></script>
+	<script type="text/javascript">
+		function p() {
+			document.getElementById("result").innerHTML = isPrime(parseInt(
+				document.getElementsByName("n")[0].value
+			));
+		}
 
-		
-  </script>
+	</script>
 </body>
 
 </html>
